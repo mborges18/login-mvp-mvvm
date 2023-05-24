@@ -1,4 +1,4 @@
-package com.example.loginmvpmvvm.fragments
+package com.example.loginmvpmvvm.ui.access.register
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.loginmvpmvvm.R
 
-class CadastroFragment : Fragment() {
+class RegisterFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

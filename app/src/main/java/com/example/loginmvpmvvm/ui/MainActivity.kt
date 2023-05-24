@@ -1,4 +1,4 @@
-package com.example.loginmvpmvvm
+package com.example.loginmvpmvvm.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,9 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setUpWithTabs()
-
     }
 
     fun setUpWithTabs(){
@@ -37,6 +35,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }.attach()
-
     }
+
 }

@@ -4,15 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabGravity="fill"
-        app:tabBackground="@color/black"
-        app:tabIndicator="@color/white">
+        app:tabGravity="fill">
 
     </com.google.android.material.tabs.TabLayout>
 
