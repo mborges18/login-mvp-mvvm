@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.access.login.LoginFragment"
     android:background="@android:color/white">
 
@@ -17,37 +18,59 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"/>
 
-    <EditText
-        android:id="@+id/et_email_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:layout_below="@id/title_login"
-        android:layout_marginTop="24dp"
-        android:drawableStart="@drawable/ic_email"
-        android:drawablePadding="4dp"
-        android:hint="Email"/>
+   <com.google.android.material.textfield.TextInputLayout
+       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+       android:id="@+id/til_email"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginHorizontal="32dp"
+       android:layout_marginTop="32dp"
+       android:layout_below="@id/title_login"
+       app:errorEnabled="false">
 
-    <EditText
-        android:id="@+id/et_password_login"
+       <com.google.android.material.textfield.TextInputEditText
+           android:id="@+id/et_email"
+           android:layout_width="match_parent"
+           android:layout_height="56dp"
+           android:maxLines="1"
+           android:maxLength="20"
+           android:hint="Email" />
+   </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/til_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:hint="Password"
-        android:layout_below="@id/et_email_login"
         android:layout_marginTop="16dp"
-        android:drawableStart="@drawable/ic_lock"
-        android:drawablePadding="4dp"/>
+        android:layout_below="@id/til_email"
+        android:layout_marginHorizontal="32dp"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@android:color/holo_blue_light"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="1dp"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@android:color/holo_red_light"
+        app:errorEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:maxLines="1"
+            android:maxLength="16"
+            android:hint="Senha"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_get_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/et_password_login"
+        android:layout_below="@id/til_password"
         android:layout_marginTop="60dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginHorizontal="40dp"
+        android:layout_marginHorizontal="32dp"
         android:text="Send Data"
         />
 </RelativeLayout>

@@ -31,6 +31,7 @@ class LoginViewModel(
 
         val signInRequest = SignInRequest(email = email, password = password)
         when (val response = repository.signIn(signInRequest)) {
+
             is ResultState.Success -> {
                 signIn.value = response.data
             }
