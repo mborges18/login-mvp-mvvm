@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.loginmvpmvvm">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-<!--    android:dataExtractionRules="@xml/data_extraction_rules"-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
-        android:name="MainApplication"
+        android:name=".MainApplication"
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -16,6 +16,9 @@
         android:theme="@style/Theme.LoginMvpMvvm"
         tools:targetApi="31">
         <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
@@ -24,6 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.loginmvpmvvm.provider"

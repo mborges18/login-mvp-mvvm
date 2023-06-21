@@ -33,8 +33,9 @@
            android:layout_width="match_parent"
            android:layout_height="56dp"
            android:maxLines="1"
-           android:maxLength="20"
-           android:hint="Email" />
+           android:maxLength="55"
+           android:hint="Email"
+           android:inputType="textEmailAddress"/>
    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -59,7 +60,8 @@
             android:layout_height="56dp"
             android:maxLines="1"
             android:maxLength="16"
-            android:hint="Senha"/>
+            android:hint="Senha"
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
